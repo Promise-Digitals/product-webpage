@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Webpage</title>
+</head>
+<body>
+    <div class="container">
+        <img src="/images/logo 2.png" class="logo">
+        <div class="hero">
+            <div class="left">
+                <img src="/images/image1.png" id="product-image">
+                <div class="controls">
+                    <span class= "btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Casual T Shirt</h1>
+                <h2>$15.00</h2>
+                <h3>30% OFF</h3>
+                <p id="details">Wrangular is an American manufacturer of jeans and other clothing items. Particularly workwear.</p>
+                <form action="">
+                    <div class="size-select">
+                        <p>Size</p>
+                        <label for="small">
+                            <input type="radio" name="size" id="small">
+                            <span>S</span>
+                        </label>
+                        <label for="medium">
+                            <input type="radio" name="size" id="medium">
+                            <span>M</span>
+                        </label>
+                        <label for="large">
+                            <input type="radio" name="size" id="large">
+                            <span>L</span>
+                        </label>
+                        <label for="x-large">
+                            <input type="radio" name="size" id="x-large">
+                            <span>XL</span>
+                        </label>
+                        <label for="xx-large">
+                            <input type="radio" name="size" id="xx-large">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+                    <div class="color-select">
+                        <p>Color</p>
+                        <label for="red">
+                            <input type="radio" name="color" id="red">
+                            <span class="color1"></span>
+                        </label>
+                        <label for="green">
+                            <input type="radio" name="color" id="green">
+                            <span class="color2"></span>
+                        </label>
+                        <label for="blue">
+                            <input type="radio" name="color" id="blue">
+                            <span class="color3"></span>
+                        </label>
+                        <label for="yellow">
+                            <input type="radio" name="color" id="yellow">
+                            <span class="color4"></span>
+                        </label>
+                        <label for="black">
+                            <input type="radio" name="color" id="black">
+                            <span class="color5"></span>
+                        </label>
+                    </div>
+                    <div class="quantity">
+                        <p>Quantity</p>
+                        <input type="number" name="" id="number">
+                    </div>
+                </form>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let productImage = document.getElementById("product-image");
+        let btn = document.getElementsByClassName("btn");
+
+        btn[0].onclick = function(){
+            productImage.src = "/images/image1.png";
+
+            for(bt of btn){
+                bt.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function(){
+            productImage.src = "/images/image2.png";
+            
+            for (bt of btn) {
+                bt.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function(){
+            productImage.src = "/images/image3.png";
+
+            for (bt of btn) {
+                bt.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+    </script>
+</body>
+</html>
